@@ -1,0 +1,5 @@
+Tried to figure out the process necessary to have one program go about compiling and coding another.  Kinda spurred by the idea of AI creating copies of improved versions of themselves which are recursively updated.
+
+Learned about how system calls work.
+
+Curious as to how a process could be unified to work on not one but many OS's.  I would probably need to include a compiler which could run instead of depending on the system's.  I think that while EVIL, making viruses is probably a cool way to learn about how to code.  A cool idea based off of this would be a program which not only creates copies of itself, but the copies recursively call themselves and spread folders randomly, copying the names of other common files in directories.   
