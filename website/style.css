@@ -1,21 +1,38 @@
 * {
-	font-family: Helvetica;
-	border: 2px solid rgba(0,0,0,1);
+	font-family:  Arial;
+	border: 0px solid rgba(0,0,0,1);
 
 }
 
+a {
+	color: rgb(200,170,130);
+}
+
 body {
+	font-size: 100%;
 	background-color: rgba(10,10,10,.5);
 	background-image:url(bg1.jpg);
 	background-position: left;
 	background-attachment: fixed;
+	background-size: cover;
 }
 
 h1 {
 	text-align: center;
-	font-size: 50px;
-	color: DarkGray;
+	font-size: 3.125em;
+	color: rgb(200, 170, 130);
+	font-variant: small-caps;
+	font-weight: 500;
 }
+
+h2 {
+	font-size: 2em;
+	color: rgb(200, 170, 130);
+	border-bottom: 4px solid rgb(200, 170, 130);
+	font-variant: small-caps;
+	font-weight: 400;
+}
+
 #header {
 	margin:auto;
 	width: 90%;
@@ -33,11 +50,17 @@ h1 {
 	height:327px;
 	width: 300px;
 	border-radius: 20%;
-	border: 20px solid rgba(0,0,0,.15);
+	border: 20px solid rgba(200,170,130,.9);
 }
 
 #meat {
-	background-color: rgba(100,100,100,.5);
+	background-color: rgba(255,255,240,1);
+	border: 10px groove rgb(200,170,130);
 	margin: auto;
 	width: 60%;
+}
+
+.content {
+		margin-left: 7.5%;
+		margin-right: 7.5%;
 }
