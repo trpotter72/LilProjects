@@ -55,9 +55,36 @@ h2 {
 
 #meat {
 	background-color: rgba(255,255,240,1);
-	border: 10px groove rgb(200,170,130);
+	border: 10px double rgb(200,170,130);
+	border-radius: 30px;
 	margin: auto;
 	width: 60%;
+}
+
+#footer {
+	margin: 10px 0px 0px 0px;
+	height:3em;
+	width:auto;
+	background-color: rgba(255,255,240,1);
+	border: 10px double rgb(200,170,130);
+	border-radius: 15px;
+	text-align: justify;
+	min-width: 500px;
+}
+
+#footer_notes {
+	margin: 1em 20% 1em 20%;
+	padding: 0px;
+}
+
+#footer_notes:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+#footer_notes li {
+	display: inline-block;
 }
 
 .content {
