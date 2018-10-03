@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "Build",
+            "command": "g++",
+            "args": [
+                "simulation.cpp",
+                "-o",
+                "Game"
+            ],
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "taskName": "Run",
+            "command": ".\\Game.exe",
+            "type": "shell"
+        }
+    ]
+}
