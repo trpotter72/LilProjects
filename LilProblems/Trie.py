@@ -70,10 +70,10 @@ class Trie:
     def returnClosest(self, count, string):
         return [x.data for x in self.returnClosestNodes(count, string)]
 
-a = Trie()
-a.insert("T", "Og node")
-a.insert("Trent", "Casual")
-a.insert("Trenton", "The usu\'")
-a.insert("Tee-Rent", "My self given name")
-a.insert("The Main man", "what a name")
-a.insert("The end of the world", "As we know it")
+    def load_dict(self, text_file = "words.txt"):
+        file = open(text_file,'r')
+        for line in file:
+            if(line != "\n"):
+                space = line.find(' ')
+                word = line[ :space]
+                self.insert(word, line)
