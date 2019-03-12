@@ -8,7 +8,7 @@ class Solution{
 
     public:
 
-    static string longestPalindrome(const string& s){
+    static string longestPalindrome(string s) {
         int len = s.length();
         if(len == 0)
             return "";
@@ -26,12 +26,14 @@ class Solution{
         for(int i = 0; i < len; i++){
             palindrome[i][i] = true;
         }
-        for(int i = 0; i < len; i++){
-            if(s[i] == s[i+1])
+        for(int i = 0; i < len-1; i++){
+            if(s[i] == s[i+1]){
                 palindrome[i][i+1] = true;
                 x = i;
-                y = i + 1;
+                y = i + 2;
+            }
         }
+        
         bool found = true;
         int size = 2;
         while(size < len){
@@ -41,12 +43,13 @@ class Solution{
                 if(palindrome[i+1][i+size-2] && s[i] == s[i+size-1]){
                     found = true;
                     palindrome[i][i+size-1] = true;
-                    x = i;
-                    y = i + size -1;
+                    x = i; //0, 1, 2, 3
+                    y = i + size;
                 }
             }   
         }
-        return s.substr(x,y-x+1);
+        // x = 1, y = 2, 
+        return s.substr(x,y-x);
     }
 };
 
