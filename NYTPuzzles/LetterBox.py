@@ -27,12 +27,13 @@ def try_solving(file_name, sides):
             print("{}) {}".format(i,w))
         print("{}) It worked".format(len(words)))
         inp = input("Please provide the disallowed words' numbers (no spaces): ")
-        i_list = inp.split()
+        i_list = inp
         if str(len(words)) in i_list:
             print('Thank you, saving new invalid words...')
             saveInvalidWordList(banned_words)
             return
         else:
+            print(i_list)
             for i in i_list:
                 if int(i) >= 0 and int(i) < len(words):
                     banned_words.add(words[int(i)])
@@ -78,7 +79,6 @@ def get_valid(file_name, sides, banned_words):
     word_list = getValidWordList()
     last = -1
     valid = {'word':[], 'first':[], 'last':[], 'contains':[]}
-    print("DIRTY PRINT: {}".format(banned_words))
     for word in word_list:
         if word in banned_words:
             print(word)
